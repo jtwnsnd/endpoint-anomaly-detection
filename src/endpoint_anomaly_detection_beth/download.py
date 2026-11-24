@@ -11,8 +11,9 @@ def main():
     DATA_DIR.mkdir(exist_ok=True)
     for name in SPLITS:
         src = next(cache.rglob(name))
-        shutil.copy(src, DATA_DIR / name)
-        print("copied", name)
+        dest = DATA_DIR / name
+        shutil.copy(src, dest)
+        print(f"Saved {name} to {dest} ({dest.stat().st_size / 1e6:.1f} MB)")
 
 if __name__ == "__main__":
     main()
