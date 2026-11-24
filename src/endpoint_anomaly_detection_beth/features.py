@@ -1,7 +1,5 @@
 """Features for analyzing BETH dataset"""
 import pandas as pd
-import seaborn as sns
-import matplotlib as plt
 from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
